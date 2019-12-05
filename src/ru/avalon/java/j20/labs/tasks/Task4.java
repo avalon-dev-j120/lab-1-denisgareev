@@ -18,6 +18,7 @@ public class Task4 implements Task {
         Person a = new Person("Иван", "Иванов");
         Person b = new Person("Иван", "Иванов");
         boolean isEqual = a.equals(b);
+        System.out.println(isEqual);
         /*
          * TODO(Студент): Выполните задание №4
          *
@@ -31,5 +32,9 @@ public class Task4 implements Task {
          * 3. С использованием отладчика проверьте что сравнение
          *    объектов типа Person выполняется корректно.
          */
+    }
+     public static void main(String[] a) {
+        new Task4().run();
+        
     }
 }

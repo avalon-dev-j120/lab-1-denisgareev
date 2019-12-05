@@ -21,7 +21,7 @@ public class Application {
         new Task4(),
         new Task5()
     };
-
+    
     /**
      * Точка входа в приложение.
      *

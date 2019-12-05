@@ -24,11 +24,15 @@ public class Task1 implements Task {
      */
     @Override
     public void run() {
-        //что-то сделали
-        int[] array = arrayFactory.getInstance(20);
+        Integer[] array = arrayFactory.getInstance(20);
         int min = Numbers.min(array);
         int max = Numbers.max(array);
         double avg = Numbers.avg(array);
+        
+        System.out.println("min of array: " + min);
+        System.out.println("max of array: " + max);
+        System.out.println("average of array: " + avg);
+
         /*
          * TODO(Студент): Выполните задание №1
          *
@@ -56,4 +60,9 @@ public class Task1 implements Task {
          *    выполнения задания.
          */
     }
+    
+        public static void main(String[] a) {
+        new Task1().run();
+        }
+    
 }
