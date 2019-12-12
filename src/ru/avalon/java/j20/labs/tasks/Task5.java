@@ -1,5 +1,9 @@
 package ru.avalon.java.j20.labs.tasks;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import ru.avalon.java.j20.labs.Task;
 import ru.avalon.java.j20.labs.core.RandomArrayFactory;
 
@@ -23,11 +27,27 @@ public class Task5 implements Task {
      */
     @Override
     public void run() {
-        final int[] array = arrayFactory.getInstance(20);
+        final Integer[] array = arrayFactory.getInstance(20);
 
-        List<Integer> list = null;
+        List<Integer> list = new ArrayList<>();
+        for(Integer i : array) {
+            list.add(i);
+        }
+         for(Iterator it = list.iterator(); it.hasNext(); ) {
+            System.out.println(it.next());
+        }
+        //for(int i = 0; i < array.length; i++) {
+        //    list.add(array[i]);
+        //}
 
-        Set<Integer> set = null;
+        Set<Integer> set = new LinkedHashSet<>();
+        for(Integer i : array) {
+            set.add(i);
+        }
+        System.out.println("------------------------------");
+        for(Iterator it = set.iterator(); it.hasNext(); ) {
+            System.out.println(it.next());
+        }
 
         /**
          * TODO(Студент): Выполните задание №5
@@ -40,5 +60,10 @@ public class Task5 implements Task {
          * 3. С использованием отладчика проверьте корректность
          *    выполнения задания.
          */
+    }
+    
+    public static void main(String[] a) {
+        new Task5().run();
+        
     }
 }

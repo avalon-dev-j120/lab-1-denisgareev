@@ -3,6 +3,7 @@ package ru.avalon.java.j20.labs.tasks;
 import ru.avalon.java.j20.labs.Task;
 
 import java.util.Iterator;
+import ru.avalon.java.j20.labs.models.Fibonacci;
 
 /**
  * Задание №3
@@ -34,5 +35,25 @@ public class Task3 implements Task {
          * 4. С использованием отладчика проверьте корректность
          *    выполнения задания.
          */
+        
+        Iterable<Integer> f = new Fibonacci(20, 2);
+        Iterator<Integer> it = f.iterator();
+        
+
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+        
+        int sum = 0;
+        for (int x : f) {
+            sum += x;
+        }
+        System.out.println("Total first 20s: " + sum);
+        
+        
+    }
+    public static void main(String[] a) {
+        new Task3().run();
+        
     }
 }
